@@ -2,4 +2,25 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  background-color: #5F81B2;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.title-author {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.btn-create-task {
+  background-color: #F5D57F;
 }
