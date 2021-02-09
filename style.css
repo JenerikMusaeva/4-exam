@@ -13,7 +13,7 @@ body {
   color: #FFFFFF;
 }
 
-.title-author {
+.title-author, .title-list {
   font-weight: 900;
   font-size: 18px;
   line-height: 25px;
@@ -21,6 +21,35 @@ body {
   color: #FFFFFF;
 }
 
+.btn {
+  height: 40px;
+}
+
 .btn-create-task {
   background-color: #F5D57F;
+}
+
+.modal-content {
+  background-color: #FFFBE3;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+#saveTask {
+  background-color: #5F81B2;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.btn-cancel {
+  background-color: #AEAEAE;
+  color: #FFFFFF;
+}
+
+.form-group {
+  margin-bottom: 17px;
 }
