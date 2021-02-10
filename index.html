@@ -17,17 +17,22 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">todolist</h1>
-      <h2 class="title-author">by name surname</h2>
 
-      <button
-        type="button"
-        class="btn btn-create-task"
-        data-bs-toggle="modal"
-        data-bs-target="#createTaskModal"
-      >
-        Создать новую задачу
-      </button>
+        <div class="header">
+            <div class="header-title">
+              <h1 class="title">todolist</h1>
+              <h2 class="title-author">by name surname</h2>
+            </div>
+
+          <button
+            type="button"
+            class="btn btn-create-task"
+            data-bs-toggle="modal"
+            data-bs-target="#createTaskModal"
+          >
+            Создать новую задачу
+          </button>
+      </div>
 
       <div
         class="modal fade"
@@ -68,7 +73,7 @@
                 ></textarea>
               </div>
 
-              <div class="errors"></div>
+              <div class="errors" id="errors"></div>
 
               <button type="button" id="saveTask" class="btn col-12">Сохранить</button>
               <button type="button" class="btn btn-cancel col-12" data-bs-dismiss="modal">

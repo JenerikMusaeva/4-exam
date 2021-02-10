@@ -9,15 +9,31 @@ body {
   width: 1030px;
 }
 
+.header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .title {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 55px;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.title-author, .title-list {
+.title-list {
+  margin-top: 86px;
+  margin-bottom: 36px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.title-author {
   font-weight: 900;
   font-size: 18px;
   line-height: 25px;
@@ -30,7 +46,11 @@ body {
 }
 
 .btn-create-task {
+  margin-top: 10px;
   background-color: #F5D57F;
+  width: 287px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .modal-content {
@@ -77,7 +97,7 @@ h3 {
   width: 490px;
   justify-content: space-between;
   padding: 15px;
-  background-color: #fff;
+  background-color: #fFFBE3;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
@@ -105,3 +125,31 @@ h3 {
   background-size: cover;
   display: inline-block;
 }
+
+.delete-task :hover {
+  cursor: pointer;
+}
+
+@media (min-width: 0) and (max-width: 576px) {
+  .container {
+      width: 100%;
+      display: block;
+  } 
+
+  .header {
+    display: block;
+  }
+
+  .title-list {
+    margin-top: 31px;
+    margin-bottom: 20px;
+  }
+
+  .task-list {
+    display: block;
+  }
+
+  .task-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
