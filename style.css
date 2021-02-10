@@ -5,6 +5,10 @@ body {
   background-color: #5F81B2;
 }
 
+.container {
+  width: 1030px;
+}
+
 .title {
   font-weight: 900;
   font-size: 40px;
@@ -52,4 +56,52 @@ body {
 
 .form-group {
   margin-bottom: 17px;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.task-item {
+  display: flex;
+  width: 490px;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.task-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-check {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/checkbox.svg);
+  background-size: cover;
+  display: inline-block;
+}
+
+.delete-task {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/delete-task.svg);
+  background-size: cover;
+  display: inline-block;
 }
