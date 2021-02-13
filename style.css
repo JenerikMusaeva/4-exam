@@ -61,7 +61,7 @@ body {
   border-bottom: none;
 }
 
-#saveTask {
+#saveTask, #btnEditTask {
   background-color: #5F81B2;
   font-size: 16px;
   line-height: 22px;
@@ -102,6 +102,12 @@ h3 {
   border-radius: 5px;
 }
 
+.task-leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .task-icon {
   display: flex;
   flex-direction: column;
@@ -126,9 +132,36 @@ h3 {
   display: inline-block;
 }
 
-.delete-task :hover {
+.task-edit {
+  display: flex;
+  align-items: center;
+  color: #2A5B94;
+  text-decoration: underline;
+}
+
+.icon-edit {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/edit.svg);
+  background-size: cover;
+  display: inline-block;
+}
+
+.delete-task:hover {
   cursor: pointer;
 }
+
+.task-edit:hover {
+cursor: pointer; 
+}
+
+#modalDeleteTask {
+  margin-bottom: 10px;
+}
+
+/* modal style  */
+
 
 @media (min-width: 0) and (max-width: 576px) {
   .container {
