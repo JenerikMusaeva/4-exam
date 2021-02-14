@@ -119,19 +119,46 @@ h3 {
   justify-content: space-between;
 }
 
-.form-check-input {
-  width: 20px;
-  height: 20px;
-  background-color: #fFFBE3;
+.checkbox-other {
+  display: flex;
+  flex-direction: row;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
 }
-/* .icon-check {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-image: url(./images/checkbox.svg);
-  background-size: cover;
-  display: inline-block;
-} */
+
+.checkbox-other input[type=checkbox] {
+  
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.checkbox-other span {
+	display: inline-block;
+	position: relative; 
+	padding: 0 0 0 18px; 
+	/* line-height: 22px;     */
+}
+
+.checkbox-other span:before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(./images/checkbox.svg) no-repeat;
+}
+ 
+.checkbox-other input[type=checkbox]:checked + span:before {
+	background-image: url(./images/checked.svg);
+}
 
 .delete-task {
   content: '';
@@ -193,3 +220,4 @@ cursor: pointer;
     width: 100%;
     margin-bottom: 20px;
   }
+}

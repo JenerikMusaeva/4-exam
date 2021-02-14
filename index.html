@@ -60,24 +60,26 @@
             </div>
 
             <div class="modal-body">
-              <div class="form-group">
-                <input
-                  name="task-title"
-                  type="text"
-                  class="form-control"
-                  id="task-title"
-                  placeholder="Заголовок"
-                />
-              </div>
+              <form id="form">
+                <div class="form-group">
+                  <input
+                    name="task-title"
+                    type="text"
+                    class="form-control"
+                    id="task-title"
+                    placeholder="Заголовок"
+                  />
+                </div>
 
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  name="task-description"
-                  id="task-description"
-                  placeholder="Описание"
-                ></textarea>
-              </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="task-description"
+                    id="task-description"
+                    placeholder="Описание"
+                  ></textarea>
+                </div>
+              </form>
 
               <div class="errors" id="errors"></div>
 
@@ -152,7 +154,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div id="task-form" class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title" id="exampleModalLabel">Вы уверены что хотите удалить задачу навсегда?</h3>
+              <p class="modal-title" id="exampleModalLabel">Вы уверены что хотите удалить задачу навсегда?</p>
               <button
                 type="button"
                 class="btn-close"
@@ -170,8 +172,6 @@
           </div>
         </div>
       </div>
-
-      
 
     </div>
 
