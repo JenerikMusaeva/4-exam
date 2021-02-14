@@ -1,8 +1,9 @@
 const taskForm = document.getElementById('task-form')
 const btnAddTask = document.getElementById('saveTask')
 const tasksDiv = document.getElementById('tasks')
-// const doneTask = document.getElementsById('task-done')
 const modalDeleteTask = document.getElementById('modalDeleteTask')
+// let $task = document.createElement('div')
+// const $taskTitle = $task.querySelector('h3')
 
 //создание сообщения ошибки
 const addError = errorMessage => {
@@ -40,7 +41,7 @@ btnAddTask.addEventListener('click', e => {
     <span class="task-edit" id='task-edit'><i class='icon-edit' ></i> изменить</span>
     </div>
     <div class='task-icon'>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <input class="form-check-input" type="checkbox" id='checkbox'/>
     <i class='delete-task' id='delete-task'></i>
     </div>
     `
@@ -52,6 +53,14 @@ btnAddTask.addEventListener('click', e => {
   //  очищение полей модалки создания записи
   _taskTitle.value = ''
   _taskDescription.value = ''
+
+  // скрипт для перечеркивания задачи
+  let $checkBox = $task.querySelector('#checkbox')
+  $checkBox.addEventListener('change', e =>{
+    const $checkTitle = $task.querySelector('h3')
+    $checkTitle.style.textDecoration = 'line-through';
+    ($checkBox.checked) ? ($checkTitle.style.textDecoration = "line-through") : ($checkTitle.style.textDecoration = "none");
+  })
 
   // скрипт для удаления записи
   const deleteTask = $task.querySelector('#delete-task')
