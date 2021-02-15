@@ -54,6 +54,13 @@ btnAddTask.addEventListener('click', e => {
   _taskTitle.value = ''
   _taskDescription.value = ''
 
+  // очищение модалки при отмене создания записи
+
+  document.getElementById('createTaskModal').addEventListener('hidden.bs.modal', () => {
+    form.reset();
+    msg.remove();
+  });
+
   // скрипт для перечеркивания задачи
   let $checkBox = $task.querySelector('#checkbox')
   $checkBox.addEventListener('change', e => {
