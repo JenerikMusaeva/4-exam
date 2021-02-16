@@ -2,16 +2,18 @@ const taskForm = document.getElementById('task-form')
 const btnAddTask = document.getElementById('saveTask')
 const tasksDiv = document.getElementById('tasks')
 const modalDeleteTask = document.getElementById('modalDeleteTask')
-const modalForm = document.getElementById('form')
+const modalForm = document.getElementById('createTaskModal')
+const error = document.getElementById('errors')
 // let $task = document.createElement('div')
 // const $taskTitle = $task.querySelector('h3')
 
 //создание сообщения ошибки
 const addError = errorMessage => {
   let msg = document.createElement('div')
+  msg.id = 'error-title'
   msg.className = 'alert alert-danger'
   msg.innerHTML = errorMessage
-  document.getElementById('errors').append(msg)
+  error.append(msg)
 }
 
 btnAddTask.addEventListener('click', e => {
@@ -20,7 +22,7 @@ btnAddTask.addEventListener('click', e => {
   const _taskTitle = taskForm.querySelector('[name=task-title]')
   const _taskDescription = taskForm.querySelector('[name=task-description]')
 
-  document.getElementById('errors').innerHTML = ''
+   error.innerHTML = '';
 
   //валидация заголовка
   if (_taskTitle.value === '') {
@@ -48,17 +50,17 @@ btnAddTask.addEventListener('click', e => {
     `
   tasksDiv.prepend($task)
 
-  $('#createTaskModal').modal('hide')
+  $('#createTaskModal').modal('hide');
 
-  //  очищение полей модалки создания записи
+  //  очищение полей модалки при создании записи
   _taskTitle.value = ''
   _taskDescription.value = ''
 
   // очищение модалки при отмене создания записи
-
-  document.getElementById('createTaskModal').addEventListener('hidden.bs.modal', () => {
+  modalForm.addEventListener('hidden.bs.modal', () => {
     form.reset();
-    msg.remove();
+    error.innerHTML = '';
+
   });
 
   // скрипт для перечеркивания задачи
